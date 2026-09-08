@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paysafe · Case Study · Vaibhav Kedarisetti</title>
+<meta name="description" content="A payment fraud decisioning platform built around a single north-star metric: fraud loss prevented per $1K transactions. Self-directed product case study.">
+<meta name="theme-color" content="#F2F1EE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css?v=19">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230D0D0D'/><text x='50' y='72' font-family='Helvetica,Arial' font-size='62' font-weight='500' fill='%23F2F1EE' text-anchor='middle'>V</text></svg>">
+</head>
+<body data-mode="explore">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="../index.html"><b>VAIBHAV</b> <span>Product Builder</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="paysafe.html" aria-current="page">Work</a>
+      <a href="../notes.html">Thinking</a>
+      <a href="../experience.html">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hdr__end">
+      <a class="dl" href="https://drive.google.com/uc?export=download&amp;id=1oE2FmWEl_HJkjGMAGVhuCdu49iSefUPZ" aria-label="Download resume as PDF">Resume</a>
+      <div class="modeswitch" data-mode-switch role="group" aria-label="Reading mode">
+        <button type="button" data-mode-btn="recruiter" aria-pressed="false">Recruiter</button>
+        <button type="button" data-mode-btn="explore" aria-pressed="true">Explore</button>
+      </div>
+    </div>
+  </div>
+</header>
+<p class="sr-only" aria-live="polite" data-mode-live></p>
+
+<main id="main">
+
+  <section class="wrap case__hd">
+    <div class="grid">
+      <p class="meta" style="grid-column:1/2">02</p>
+      <div style="grid-column:2/12">
+        <h1 class="h1">Paysafe</h1>
+        <p class="lead mt-l">A payment fraud decisioning platform, built around one number: fraud loss
+          prevented per $1K of transactions.</p>
+      </div>
+    </div>
+    <dl class="case__facts">
+      <div><dt>Type</dt><dd>Self-directed product case study</dd></div>
+      <div><dt>Domain</dt><dd>Fintech &middot; Risk &middot; ML</dd></div>
+      <div><dt>Owned</dt><dd>Strategy &middot; PRD &middot; Metrics &middot; Build</dd></div>
+      <div><dt>Stack</dt><dd>Next.js &middot; FastAPI &middot; PostgreSQL &middot; XGBoost</dd></div>
+    </dl>
+  </section>
+
+  <section class="wrap section--tight">
+    <figure class="plate plate--zoom" data-anim style="aspect-ratio:1876/903">
+      <picture>
+        <source type="image/webp" sizes="(max-width:1000px) 92vw, 88vw"
+                srcset="../assets/img/paysafe-900.webp 900w, ../assets/img/paysafe-1600.webp 1600w">
+        <img src="../assets/img/paysafe-1600.jpg" alt="The Paysafe fraud and risk overview dashboard"
+             width="1876" height="903" loading="lazy" decoding="async">
+      </picture>
+    </figure>
+    <p class="plate__cap"><span>02 / Paysafe, fraud and risk overview</span><span>Synthetic data, portfolio demo</span></p>
+  </section>
+
+  <section class="wrap block block--rule">
+    <div class="b-hang">
+      <p class="b-hang__l meta">01 / Problem</p>
+      <div class="b-hang__c">
+        <h2 class="h2">Fraud tooling optimises the wrong thing</h2>
+        <p class="body mt-m">Risk systems are usually judged on model accuracy. Accuracy is the wrong
+          objective: a model that blocks everything is accurate about fraud and catastrophic for the
+          business. The tension is not fraud versus no fraud. It is fraud loss against declined good
+          customers, and the two are priced very differently.</p>
+        <p class="body">So the product question was not &ldquo;how good is the model&rdquo; but &ldquo;what
+          is this decision worth, in money, and who has to defend it.&rdquo;</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">Constraint</p>
+        <p class="body mt-s">Every decision has to be explainable to a human reviewer, after the fact.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap block block--rule">
+    <div class="grid">
+      <p class="meta" style="grid-column:1/3">02 / North star</p>
+      <blockquote class="quote" style="grid-column:4/12">Fraud loss prevented per $1,000 of transactions.</blockquote>
+    </div>
+    <div class="grid mt-xl">
+      <div class="b-off">
+        <p class="body">One metric, denominated in money, that moves in the right direction only when both
+          halves of the trade-off improve. Accuracy can rise while this falls, which is exactly the
+          failure mode a fraud team needs to see.</p>
+        <p class="body">I supported it with three tiers underneath: decision-quality metrics for whether
+          the calls were right, operational metrics for whether the review queue was survivable, and risk
+          guardrails that would stop a release regardless of how good the headline looked.</p>
+      </div>
+    </div>
+
+    <ol class="decisions mt-xl">
+      <li><p class="d-n">01</p><p class="d-t">Decision quality</p><p class="d-b">Precision and recall at the chosen threshold, read as approve, review and decline rates rather than as a confusion matrix.</p></li>
+      <li><p class="d-n">02</p><p class="d-t">Operational</p><p class="d-b">Review queue volume. A model that sends 40% of traffic to manual review has not made a decision, it has deferred one.</p></li>
+      <li><p class="d-n">03</p><p class="d-t">Guardrail</p><p class="d-b">False-decline rate on good customers, and feature-distribution drift. Either can veto a release on its own.</p></li>
+    </ol>
+  </section>
+
+  <section class="wrap block block--rule">
+    <div class="b-hang">
+      <p class="b-hang__l meta">03 / System</p>
+      <div class="b-hang__c">
+        <h2 class="h2">Three signals, one score, three outcomes</h2>
+        <p class="body mt-m">The scoring engine is configurable from 0 to 100 and combines an ML
+          probability from an XGBoost model, a 14-rule policy engine, and behavioural signals. It resolves
+          to one of three decisions: approve, review, or decline.</p>
+        <p class="body">Keeping the policy engine alongside the model was a deliberate product decision, not
+          a technical hedge. Rules are how a risk team encodes a regulatory obligation or a fraud pattern
+          they learned yesterday, things a model retrained monthly cannot express in time.</p>
+        <p class="body">The three-way output matters as much as the score. Binary approve/decline forces
+          every uncertain case into a wrong answer; a review band gives the uncertainty somewhere to go,
+          at a known operational cost.</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">Interface</p>
+        <p class="body mt-s">41 REST endpoints, documented through OpenAPI so the contract is readable
+          without reading the implementation.</p>
+      </div>
+    </div>
+
+    <dl class="ledger mt-xl" data-anim>
+      <div><dd>0 to 100</dd><dt>Configurable risk score</dt></div>
+      <div><dd>14</dd><dt>Policy rules</dt></div>
+      <div><dd>41</dd><dt>REST endpoints</dt></div>
+      <div><dd>3</dd><dt>Decision outcomes</dt></div>
+    </dl>
+  </section>
+
+  <section class="wrap block block--rule">
+    <div class="b-hang">
+      <p class="b-hang__l meta">04 / The surface</p>
+      <div class="b-hang__c">
+        <h2 class="h2">Numbers that cannot disagree with each other</h2>
+        <p class="body mt-m">Every KPI and every chart on the overview is computed over the same filtered
+          population. Change the date range or the country and the whole page moves together. That reads
+          like an implementation detail and is actually the difference between a dashboard a risk team
+          trusts and one they quietly stop opening.</p>
+        <p class="body">The failure it prevents is specific. A headline metric filtered one way, a chart
+          filtered another, and an argument in a review meeting that nobody in the room can settle. Once
+          two numbers on the same screen disagree once, every number on that screen becomes suspect, and
+          the team goes back to running their own queries.</p>
+        <p class="body">Two smaller decisions are visible on the same surface. Review rate carries its
+          queue cost in currency, because a review is a decision deferred at a price and the price
+          belongs next to it. And latency is shown at p95 against an explicit SLO rather than as an
+          average, because in a payments path the average is fine right up until it is not.</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">Sections</p>
+        <p class="body mt-s">Dashboard, Transactions, Investigations, Rules Engine, Model Monitoring,
+          Feedback Loop, Experiments, Metrics Framework, Scoring Sandbox.</p>
+        <p class="meta mt-m">Feedback Loop and Scoring Sandbox are the two most teams do without, and the
+          two that decide whether a threshold ever gets revisited.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap block block--rule">
+    <div class="b-hang">
+      <p class="b-hang__l meta">05 / Validation</p>
+      <div class="b-hang__c">
+        <h2 class="h2">Proving the ML earned its complexity</h2>
+        <p class="body mt-m">I designed a synthetic A/B experiment comparing rules-only decisioning against
+          rules plus ML, evaluated on both statistical significance and economic impact. The second half of
+          that sentence is the point: a statistically significant improvement that moves fraud loss by a
+          rounding error is not a reason to add a model to a payments path.</p>
+        <p class="body">For explainability I implemented TreeSHAP at the transaction level, so any single
+          decision can be reconstructed and defended. For drift, Population Stability Index monitoring on
+          feature distributions, the early warning that a model is being asked about a population it was
+          not trained on.</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">Experiment result</p>
+        <p class="body mt-s">The decision rule was fixed before the run: the ML arm had to beat rules-only
+          on economic impact, not merely reach statistical significance. A significant result that moves
+          fraud loss by a rounding error is not a reason to put a model in a payments path.</p>
+        <p class="meta mt-m">The demo runs on 50,000 synthetic transactions and labels itself as such in the product. A design exercise, not evidence of production performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap block block--rule">
+    <div class="b-hang">
+      <p class="b-hang__l meta">06 / Artefacts</p>
+      <div class="b-hang__c">
+        <h2 class="h2">What shipped alongside the code</h2>
+        <p class="body mt-m">PRD, personas, user journeys, acceptance criteria, roadmap, prioritisation and
+          a metrics framework, ending in an engineering handoff. Building the thing myself was useful
+          mainly because it made the handoff document honest. The estimates had to survive contact with
+          the implementation.</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">Primary user</p>
+        <p class="body mt-s">The fraud analyst working the review queue, not the data scientist tuning
+          the model.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section--tight">
+    <div class="rule rule--ink"></div>
+    <div class="grid mt-xl">
+      <div class="b-half">
+        <p class="meta">Next case study</p>
+        <a class="h2 mt-s" href="productlens.html" style="display:block">03 / ProductLens &rarr;</a>
+        <p class="body mt-s">Multi-agent research that turns market signal into product decisions.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot" id="contact">
+  <div class="wrap foot__grid">
+    <div class="foot__a">
+      <p class="meta">Contact</p>
+      <p class="h2 mt-s">Open to product roles.</p>
+      <p class="body mt-m">Hyderabad or Bengaluru, remote, hybrid or onsite.</p>
+    </div>
+    <div class="foot__b">
+      <p class="meta">Open to</p>
+      <ul class="roles mt-s">
+        <li>Product Manager / APM</li><li>Product Analyst</li><li>Technical Product</li>
+        <li>Product Strategy</li><li>Growth Product</li><li>Founder&rsquo;s Office</li>
+      </ul>
+    </div>
+    <div class="foot__c">
+      <p class="meta">Elsewhere</p>
+      <ul class="clist mt-s">
+        <li><a href="mailto:vaibhavkedarisetti1@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/vaibhav-kedarisetti/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/vaibhavkedarisetti" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://drive.google.com/uc?export=download&amp;id=1oE2FmWEl_HJkjGMAGVhuCdu49iSefUPZ" data-dl>Resume</a></li>
+      </ul>
+    </div>
+    <div class="foot__end">
+      <p class="meta">Vaibhav Kedarisetti, Product Builder</p>
+      <p class="meta">Designed and built by me, 2026</p>
+    </div>
+  </div>
+</footer>
+
+<div class="draftbadge" data-draft-badge>
+  <span>Draft: <b data-draft-count>0</b> placeholders left</span>
+  <button type="button" data-draft-off aria-label="Hide draft highlighting">&times;</button>
+</div>
+
+<script src="../assets/js/site.js?v=19" defer></script>
+</body>
+</html>

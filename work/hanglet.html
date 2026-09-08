@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hanglet · Case Study · Vaibhav Kedarisetti</title>
+<meta name="description" content="A 0→1 consumer app for finding people nearby to do everyday things with. Problem discovery, personas, MVP definition, prioritisation, experimentation and metrics.">
+<meta name="theme-color" content="#F2F1EE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css?v=19">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230D0D0D'/><text x='50' y='72' font-family='Helvetica,Arial' font-size='62' font-weight='500' fill='%23F2F1EE' text-anchor='middle'>V</text></svg>">
+</head>
+<body data-mode="explore">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="../index.html"><b>VAIBHAV</b> <span>Product Builder</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="hanglet.html" aria-current="page">Work</a>
+      <a href="../notes.html">Thinking</a>
+      <a href="../experience.html">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hdr__end">
+      <a class="dl" href="https://drive.google.com/uc?export=download&amp;id=1oE2FmWEl_HJkjGMAGVhuCdu49iSefUPZ" aria-label="Download resume as PDF">Resume</a>
+      <div class="modeswitch" data-mode-switch role="group" aria-label="Reading mode">
+        <button type="button" data-mode-btn="recruiter" aria-pressed="false">Recruiter</button>
+        <button type="button" data-mode-btn="explore" aria-pressed="true">Explore</button>
+      </div>
+    </div>
+  </div>
+</header>
+<p class="sr-only" aria-live="polite" data-mode-live></p>
+
+<main id="main">
+
+  <!-- ============ HEADER ============ -->
+  <section class="wrap case__hd">
+    <div class="grid">
+      <p class="meta" style="grid-column:1/2">01</p>
+      <div style="grid-column:2/12">
+        <h1 class="h1">Hanglet</h1>
+        <p class="lead mt-l">An app for finding people nearby to do ordinary things with. Coffee, a walk,
+          a market run, an event on a weeknight.</p>
+      </div>
+    </div>
+    <dl class="case__facts">
+      <div><dt>Role</dt><dd>Co-founder &amp; Product Manager</dd></div>
+      <div><dt>Timeline</dt><dd>May 2026 to present</dd></div>
+      <div><dt>Type</dt><dd>B2C &middot; Consumer &middot; 0&rarr;1</dd></div>
+      <div><dt>Live</dt><dd><a class="link" href="https://hanglet.com" target="_blank" rel="noopener">hanglet.com</a>, iOS and Android</dd></div>
+    </dl>
+  </section>
+
+  <nav class="casenav" aria-label="Case study sections" data-spy>
+    <div class="wrap">
+      <ol>
+        <li><a href="#problem">01 Problem</a></li>
+        <li><a href="#users">02 Users</a></li>
+        <li><a href="#research">03 Research</a></li>
+        <li><a href="#insight">04 Insight</a></li>
+        <li><a href="#strategy">05 Strategy</a></li>
+        <li><a href="#product">06 Product</a></li>
+        <li><a href="#decisions">07 Decisions</a></li>
+        <li><a href="#validation">08 Validation</a></li>
+        <li><a href="#next">09 Next</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ============ HERO PLATE ============ -->
+  <section class="wrap section--tight">
+    <figure class="plate plate--zoom" data-anim style="aspect-ratio:1600/770">
+      <picture>
+        <source type="image/webp" sizes="(max-width:1000px) 92vw, 88vw"
+                srcset="../assets/img/hanglet-site-900.webp 900w, ../assets/img/hanglet-site-1600.webp 1600w">
+        <img src="../assets/img/hanglet-site-1600.jpg" alt="The Hanglet landing page, headlined Never do life alone"
+             width="1600" height="770" loading="lazy" decoding="async">
+      </picture>
+    </figure>
+    <p class="plate__cap"><span>hanglet.com</span><span>Live on iOS and Android</span></p>
+  </section>
+
+  <!-- ============ 01 PROBLEM ============ -->
+  <section class="wrap block block--rule" id="problem">
+    <div class="b-hang">
+      <p class="b-hang__l meta">01 / Problem</p>
+      <div class="b-hang__c">
+        <h2 class="h2">What I noticed</h2>
+        <p class="lead mt-m">Most people have enough friends and still end up doing things alone.
+          Not the big things. The ordinary ones.</p>
+        <p class="body mt-m">I started from a behaviour rather than a feature idea. The first question
+          was not what to build but whether the friction was real, frequent, and worth someone changing
+          a habit over. That distinction decided everything downstream. If the problem was occasional or
+          mildly annoying, no amount of product quality was going to earn a place in someone's week.</p>
+        <p class="body">So the first month went into trying to disprove it rather than building.</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">Why it matters</p>
+        <p class="body mt-s">Being alone is usually framed as having no friends. For most adults after
+          college it is structural. School and university supplied proximity and repetition for free.
+          Work supplies neither. You can have hundreds of followers and nobody to call on a Sunday.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INTERACTION 04, JOURNEY ============ -->
+  <section class="wrap block explore-only" aria-labelledby="jt">
+    <div class="ix" data-journey data-anim>
+      <div class="ix__bar">
+        <span id="jt">The path from problem to product</span>
+        <span class="tag">Interactive</span>
+      </div>
+      <div class="ix__body">
+        <div class="journey__track" role="tablist" aria-label="Product journey stages">
+          <button class="jstep" role="tab" id="jt1" aria-controls="jp1" aria-selected="true" type="button"><span class="jstep__n">01</span><span class="jstep__t">Problem</span></button>
+          <button class="jstep" role="tab" id="jt2" aria-controls="jp2" aria-selected="false" type="button"><span class="jstep__n">02</span><span class="jstep__t">Research</span></button>
+          <button class="jstep" role="tab" id="jt3" aria-controls="jp3" aria-selected="false" type="button"><span class="jstep__n">03</span><span class="jstep__t">Insight</span></button>
+          <button class="jstep" role="tab" id="jt4" aria-controls="jp4" aria-selected="false" type="button"><span class="jstep__n">04</span><span class="jstep__t">Strategy</span></button>
+          <button class="jstep" role="tab" id="jt5" aria-controls="jp5" aria-selected="false" type="button"><span class="jstep__n">05</span><span class="jstep__t">MVP</span></button>
+          <button class="jstep" role="tab" id="jt6" aria-controls="jp6" aria-selected="false" type="button"><span class="jstep__n">06</span><span class="jstep__t">Test</span></button>
+          <button class="jstep" role="tab" id="jt7" aria-controls="jp7" aria-selected="false" type="button"><span class="jstep__n">07</span><span class="jstep__t">Iterate</span></button>
+        </div>
+
+        <div class="journey__panel" id="jp1" role="tabpanel" aria-labelledby="jt1">
+          <div class="journey__l"><p class="meta">Stage 01</p><p class="h3 mt-s">Frame it as a problem, not a product</p></div>
+          <div class="journey__r">
+            <p class="body">Writing the problem statement first stops you defending a solution you already
+              like. The version I kept had to name the person, the moment, and the cost of the current
+              workaround.</p>
+            <p class="meta mt-m">Statement: people want company for a specific activity, not a new social circle.</p>
+          </div>
+        </div>
+        <div class="journey__panel" id="jp2" role="tabpanel" aria-labelledby="jt2" hidden>
+          <div class="journey__l"><p class="meta">Stage 02</p><p class="h3 mt-s">30+ conversations before a line of code</p></div>
+          <div class="journey__r">
+            <p class="body">I ran 30+ problem-discovery conversations and a competitor sweep. The goal was
+              not validation. It was to find the version of the problem people described without being
+              prompted, and to hear which workarounds they already paid for in time or awkwardness.</p>
+            <p class="meta mt-m">Decision: prioritise the pain that came up unprompted.</p>
+          </div>
+        </div>
+        <div class="journey__panel" id="jp3" role="tabpanel" aria-labelledby="jt3" hidden>
+          <div class="journey__l"><p class="meta">Stage 03</p><p class="h3 mt-s">The insight that narrowed scope</p></div>
+          <div class="journey__r">
+            <p class="body">Research is only useful when it kills options. The finding worth keeping was
+              the one that made several planned features obviously unnecessary.</p>
+            <p class="meta mt-m">Insight: the unit of value is one shared activity, not a relationship.</p>
+          </div>
+        </div>
+        <div class="journey__panel" id="jp4" role="tabpanel" aria-labelledby="jt4" hidden>
+          <div class="journey__l"><p class="meta">Stage 04</p><p class="h3 mt-s">Position against the workaround</p></div>
+          <div class="journey__r">
+            <p class="body">The competitor for a 0&rarr;1 consumer product is rarely another app. Here it
+              is the group chat that never converts to a plan, and the decision to just stay in.
+              Positioning had to beat those, not a category.</p>
+            <p class="meta mt-m">Position: meet people nearby and never do life alone.</p>
+          </div>
+        </div>
+        <div class="journey__panel" id="jp5" role="tabpanel" aria-labelledby="jt5" hidden>
+          <div class="journey__l"><p class="meta">Stage 05</p><p class="h3 mt-s">15+ initiatives, ranked on five axes</p></div>
+          <div class="journey__r">
+            <p class="body">I scored 15+ initiatives on user value, business impact, engineering effort,
+              strategic fit and growth potential. Anything that did not serve the core loop was pushed
+              past the MVP line, however cheap it was to build.</p>
+            <p class="meta mt-m">Output: PRDs, user stories, acceptance criteria, user journeys.</p>
+          </div>
+        </div>
+        <div class="journey__panel" id="jp6" role="tabpanel" aria-labelledby="jt6" hidden>
+          <div class="journey__l"><p class="meta">Stage 06</p><p class="h3 mt-s">Instrument before you argue</p></div>
+          <div class="journey__r">
+            <p class="body">Google Analytics went in early across acquisition, activation, engagement and
+              conversion, so disagreements about what was working could be settled with a funnel rather
+              than an opinion.</p>
+            <p class="meta mt-m">Then: 8+ A/B experiments across onboarding, UX flows and messaging.</p>
+          </div>
+        </div>
+        <div class="journey__panel" id="jp7" role="tabpanel" aria-labelledby="jt7" hidden>
+          <div class="journey__l"><p class="meta">Stage 07</p><p class="h3 mt-s">Ship, read, cut, repeat</p></div>
+          <div class="journey__r">
+            <p class="body">Backlog refinement, sprint planning, design and engineering coordination,
+              sprint reviews, feedback-driven releases. The loop matters more than any single release
+              inside it.</p>
+            <p class="meta mt-m">Current state: live at hanglet.com, with the core loop shipped and under iteration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 USERS ============ -->
+  <section class="wrap block block--rule" id="users">
+    <div class="b-hang">
+      <p class="b-hang__l meta">02 / Users</p>
+      <div class="b-hang__c">
+        <h2 class="h2">Who has this problem</h2>
+        <p class="body mt-m">I kept the persona set deliberately small. Two personas you can actually
+          picture beat five you cannot, and a third is usually a sign the problem is not sharp enough
+          yet. Each one is built around a trigger moment rather than a demographic. Age and job title
+          are the least useful things about a user here.</p>
+        <p class="body">What matters is when the problem bites, what workaround they already tolerate,
+          and what it would take to make them change it. A persona that cannot tell you what to build
+          is decoration.</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">Built from</p>
+        <p class="body mt-s">30+ problem-discovery conversations, competitor research, and the
+          workarounds people described without being prompted.</p>
+      </div>
+    </div>
+
+    <div class="ix mt-xl" data-journey data-anim>
+      <div class="ix__bar">
+        <span>The persona set</span>
+        <span class="tag">Interactive</span>
+      </div>
+      <div class="ix__body">
+        <div class="journey__track" role="tablist" aria-label="Personas">
+          <button class="jstep" role="tab" id="pt1" aria-controls="pp1" aria-selected="true" type="button">
+            <span class="jstep__n">P1</span><span class="jstep__t">After college</span></button>
+          <button class="jstep" role="tab" id="pt2" aria-controls="pp2" aria-selected="false" type="button">
+            <span class="jstep__n">P2</span><span class="jstep__t">The drifted local</span></button>
+          <button class="jstep" role="tab" id="pt3" aria-controls="pp3" aria-selected="false" type="button">
+            <span class="jstep__n">P3</span><span class="jstep__t">The visitor</span></button>
+          <button class="jstep" role="tab" id="pt4" aria-controls="pp4" aria-selected="false" type="button">
+            <span class="jstep__n">X</span><span class="jstep__t">Not the user</span></button>
+        </div>
+
+        <!-- P1 -->
+        <div class="journey__panel" id="pp1" role="tabpanel" aria-labelledby="pt1">
+          <div class="journey__l">
+            <p class="meta">Primary persona</p>
+            <p class="h3 mt-s">After college</p>
+            <p class="body mt-s">Two to five years out of university, often in a new city for work.
+              Has colleagues and a full follower count. Has nobody to call on a Sunday.</p>
+            <p class="meta mt-m">The MVP is built for this person</p>
+          </div>
+          <div class="journey__r">
+            <dl class="deflist">
+              <dt>The trigger moment</dt>
+              <dd>Saturday morning with nothing in the calendar. Or wanting to try a place and running
+                through a contact list that is full of people who would find the invitation strange.</dd>
+              <dt>What they do today</dt>
+              <dd>Stays in. Scrolls. Waits for colleagues to organise something. Calls friends in another
+                city, which helps and does not solve it.</dd>
+              <dt>What they actually want</dt>
+              <dd>Not friendship. Company for the next two hours, with someone who also wanted to go.</dd>
+              <dt>What stops them</dt>
+              <dd>Meeting a stranger feels like effort and a small risk. Every nearby app they have tried
+                signals dating or professional networking, and neither is what they are asking for.</dd>
+              <dt>What would make them switch</dt>
+              <dd>One low-stakes meet-up that actually happened. The bar is not a great experience, it is
+                a non-awkward one where the other person showed up.</dd>
+              <dt>Why they are first</dt>
+              <dd>Highest frequency, least tolerable workaround, and a clear moment of onset. Leaving
+                university, or moving for a job, reliably creates this need, which also makes this group
+                findable at the moment the need appears rather than in general.</dd>
+            </dl>
+          </div>
+        </div>
+
+        <!-- P2 -->
+        <div class="journey__panel" id="pp2" role="tabpanel" aria-labelledby="pt2" hidden>
+          <div class="journey__l">
+            <p class="meta">Secondary persona</p>
+            <p class="h3 mt-s">The drifted local</p>
+            <p class="body mt-s">Has lived here for years. Still has friends. Does not have available
+              ones.</p>
+            <p class="meta mt-m">Served, but not optimised for</p>
+          </div>
+          <div class="journey__r">
+            <dl class="deflist">
+              <dt>How their need differs</dt>
+              <dd>P1 has no one to ask. P2 has plenty of people to ask and none of them are free. The
+                shortage is availability, not connection.</dd>
+              <dt>The trigger moment</dt>
+              <dd>A weeknight, or a spontaneous idea on short notice. Friends have partners, children,
+                commutes, or a different schedule entirely.</dd>
+              <dt>What they do today</dt>
+              <dd>Floats it in a group chat that never converts into a plan, then goes alone or does not
+                go. More tolerable than P1's workaround, which is exactly why they are second.</dd>
+              <dt>Where the MVP already works</dt>
+              <dd>Same loop. Find something happening nearby, find someone going, go. No extra scope
+                needed to serve them.</dd>
+              <dt>Where it does not</dt>
+              <dd>They think activity first, not person first. They arrive knowing what they want to do
+                and only need company for it. That is a real gap I left open on purpose.</dd>
+              <dt>Why they are second</dt>
+              <dd>Serving two masters in a first release usually produces a product that is nobody's
+                first choice. P2 gets carried by the overlap. Optimising for them would have meant
+                building an events product, which is a different company.</dd>
+            </dl>
+          </div>
+        </div>
+
+        <!-- P3 -->
+        <div class="journey__panel" id="pp3" role="tabpanel" aria-labelledby="pt3" hidden>
+          <div class="journey__l">
+            <p class="meta">Edge persona</p>
+            <p class="h3 mt-s">The visitor</p>
+            <p class="body mt-s">In the city for a few days or a few weeks. Business travel, a course,
+              visiting family.</p>
+            <p class="meta mt-m">Watch, do not build for</p>
+          </div>
+          <div class="journey__r">
+            <dl class="deflist">
+              <dt>Why they turn up anyway</dt>
+              <dd>Nearby plus activities reads as things to do here. The positioning attracts them
+                without meaning to.</dd>
+              <dt>What they misunderstand</dt>
+              <dd>They treat it as a travel or meetup app. Unintended users are the cheapest positioning
+                feedback there is: what they assume the product is tells you what it is signalling.</dd>
+              <dt>The risk they create</dt>
+              <dd>They churn by design, and they make retention look worse than it is. They also thin out
+                local density, because a visitor who matches with P1 and leaves has consumed supply
+                without adding any.</dd>
+              <dt>Decision</dt>
+              <dd>Do not build for them, do not block them, and segment them out of retention reporting
+                so they cannot quietly corrupt the metric everything else is judged against.</dd>
+            </dl>
+          </div>
+        </div>
+
+        <!-- ANTI-PERSONA -->
+        <div class="journey__panel" id="pp4" role="tabpanel" aria-labelledby="pt4" hidden>
+          <div class="journey__l">
+            <p class="meta">Anti-persona</p>
+            <p class="h3 mt-s">Anyone here to date</p>
+            <p class="body mt-s">The group I decided not to build for. Naming them is what makes the
+              other three personas mean anything.</p>
+            <p class="meta mt-m">Out of scope, on purpose</p>
+          </div>
+          <div class="journey__r">
+            <dl class="deflist">
+              <dt>Why they are tempting</dt>
+              <dd>Enormously larger market, clearer monetisation, and proven willingness to pay. Every
+                product built on proximity, profiles and a connect button drifts here by gravity, whether
+                or not anyone decides to.</dd>
+              <dt>Why not</dt>
+              <dd>The moment Hanglet reads as dating, P1 stops using it. The whole promise is that
+                asking someone to get coffee carries no subtext. Dating intent changes safety
+                expectations, gender balance, and what a profile is even for.</dd>
+              <dt>What excluding them bought</dt>
+              <dd>No swiping. No ranking that rewards attractiveness. Activity first, person second, so
+                the profile answers what are you doing rather than what do you look like. Three features
+                cut, and a much sharper answer to what this app is.</dd>
+              <dt>What would change my mind</dt>
+              <dd>Nothing about the dating market. The signal I would act on is the inverse: if a large
+                share of successful meet-ups self-report as romantic, that means the positioning is
+                failing, and the fix is in the product, not the strategy.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="meta mt-s">Personas drafted from the product definition and the discovery work. Check each
+      one against your interview notes before this goes public, and replace the bracketed evidence
+      counts with real ones.</p>
+  </section>
+
+  <!-- ============ 03 RESEARCH ============ -->
+  <section class="wrap block block--rule" id="research">
+    <div class="b-hang">
+      <p class="b-hang__l meta">03 / Research</p>
+      <div class="b-hang__c">
+        <h2 class="h2">What I did to find out</h2>
+        <p class="body mt-m">30+ problem-discovery conversations, plus competitor and market research. I
+          asked about the last time the problem happened rather than about the idea. People are reliable
+          narrators of their past and unreliable predictors of their future behaviour.</p>
+        <p class="body">Competitor research was about the shape of the market rather than a feature
+          checklist. Almost everything adjacent is either dating, professional networking, or
+          interest-group events. That gap is the whole opportunity, and it is also a warning: products
+          keep landing in those three buckets because that is where the gravity pulls.</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">Artefacts</p>
+        <p class="body mt-s">PRDs, user stories, acceptance criteria, user journeys, functional
+          requirements, feature specifications.</p>
+      </div>
+    </div>
+
+    <dl class="ledger mt-xl" data-anim>
+      <div><dd>30+</dd><dt>Discovery conversations</dt></div>
+      <div><dd>15+</dd><dt>Initiatives prioritised</dt></div>
+      <div><dd>8+</dd><dt>A/B experiments run</dt></div>
+      <div><dd>10+</dd><dt>Pages built and optimised</dt></div>
+    </dl>
+    <p class="meta mt-s">Verified figures. Outcome metrics are deliberately absent until they are real.</p>
+  </section>
+
+  <!-- ============ 04 INSIGHT ============ -->
+  <section class="wrap block block--rule" id="insight">
+    <div class="grid">
+      <p class="meta" style="grid-column:1/3">04 / Insight</p>
+      <blockquote class="quote" style="grid-column:4/12">
+        Nobody makes friends by trying to make friends. They make them by doing ordinary things,
+        repeatedly, with the same people.
+      </blockquote>
+    </div>
+    <div class="grid mt-xl">
+      <div class="b-off">
+        <p class="body">This is the finding that decided the product shape. An app that asks people to
+          look for friends is asking them to admit something, and it competes directly with the feeling
+          that they should already have some. An app that asks them to join a coffee run at four is
+          asking almost nothing.</p>
+        <p class="body">So the unit is the activity, not the person. That is why the product is built
+          around a thing you can join rather than a person you can browse, and why the first screen
+          answers what is happening near me rather than who is near me.</p>
+        <p class="body">It also reframed success. A good outcome is not two people becoming friends on
+          day one. It is a coffee run that happened, was fine, and made the second one easier. Friendship
+          is the compound effect, not the feature.</p>
+        <p class="body">If the insight is wrong, the symptom will be specific. People will meet once,
+          enjoy it, and never come back, because a single shared activity was never the thing they
+          actually wanted. That is a falsifiable claim, which is the only kind worth building on.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 STRATEGY ============ -->
+  <section class="wrap block block--rule" id="strategy">
+    <div class="b-hang">
+      <p class="b-hang__l meta">05 / Strategy</p>
+      <div class="b-hang__c">
+        <h2 class="h2">What I decided to build</h2>
+        <p class="body mt-m">The MVP had to prove one loop, not demonstrate a category. I ranked 15+
+          initiatives on user value, business impact, engineering effort, strategic fit and growth
+          potential, then drew the line where the product could still stand up without the next twelve
+          items.</p>
+        <p class="body">The loop is four steps. See what is happening nearby, see who is going, join,
+          go. Everything above that line served the loop. Everything below it was a reason to come back
+          later, once the loop worked.</p>
+        <p class="body">The hardest constraint in this category is density. A social product that depends
+          on people nearby is worthless at low local scale, however good the software is. That pushed
+          scope down and geography narrow: better to work properly in one area than to be technically
+          available everywhere and empty in all of them.</p>
+        <p class="body">Density has a harder half. Joining is easy and hosting is not, so the scarce side
+          is the person willing to put a coffee run on the map at four o&rsquo;clock and risk nobody
+          coming. That is why creating sits in the middle of the navigation rather than behind a menu,
+          and why the early work was about making hosting feel small rather than making joining
+          prettier.</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">MVP scope</p>
+        <p class="body mt-s">Discover public Hanglets nearby, host one, join one, and coordinate the
+          plan. Four things. Everything else waited.</p>
+      </div>
+    </div>
+
+    <!-- INTERACTION 02 -->
+    <div class="ix mt-xl explore-only" data-choice data-anim>
+      <div class="ix__bar">
+        <span>You have one week</span>
+        <span class="tag tag--exercise">Product exercise</span>
+      </div>
+      <div class="ix__body">
+        <h3 class="h3">You can only build one. What do you choose?</h3>
+        <p class="body mt-s">There is no right answer here. The reasoning is the answer. Pick one and I
+          will show you what I would argue for, and what it costs.</p>
+
+        <div class="choices mt-m" role="group" aria-label="Choose one initiative">
+          <button class="choice" type="button" data-label="Improve onboarding">
+            <span class="choice__k">A</span><span class="choice__t">Improve onboarding</span>
+            <span class="choice__s">Get more of the people who arrive to their first real meet-up.</span>
+          </button>
+          <button class="choice" type="button" data-label="Improve discovery">
+            <span class="choice__k">B</span><span class="choice__t">Improve discovery</span>
+            <span class="choice__s">Help people find someone nearby worth meeting.</span>
+          </button>
+          <button class="choice" type="button" data-label="Improve chat">
+            <span class="choice__k">C</span><span class="choice__t">Improve chat</span>
+            <span class="choice__s">Make coordinating after joining less effortful.</span>
+          </button>
+          <button class="choice" type="button" data-label="Grow hosted events">
+            <span class="choice__k">D</span><span class="choice__t">Grow hosted events</span>
+            <span class="choice__s">Get more people hosting, not just joining.</span>
+          </button>
+        </div>
+
+        <div class="reveal" data-reveal aria-hidden="true">
+          <div><div class="reveal__in">
+            <div class="reveal__h"><p class="meta label--ink">My decision</p></div>
+            <p class="body">You picked <b data-choice-echo>none yet</b>. I would spend the week on
+              <b>onboarding</b>, and I would be nervous about it.</p>
+            <div class="rgrid mt-m">
+              <dl class="rgrid__a deflist">
+                <dt>Reasoning</dt>
+                <dd>Activation gates every metric underneath it. Better discovery, messaging and events
+                  all divide by the number of people who got far enough to use them. Fixing the widest
+                  leak first makes every later experiment cheaper to read.</dd>
+                <dt>Assumptions</dt>
+                <dd>That the drop-off is in the first session rather than in week two, and that people
+                  arriving already want this. If retention is the problem but activation is fine, this
+                  is the wrong week.</dd>
+              </dl>
+              <dl class="rgrid__b deflist">
+                <dt>Constraints</dt>
+                <dd>One week, a small team, and analytics already in place. That rules out anything
+                  needing new infrastructure, which is most of option D.</dd>
+                <dt>Expected impact</dt>
+                <dd>A measurable move in activation rate. I would define the threshold that counts as
+                  success before shipping, not after reading the result.</dd>
+                <dt>Trade-off</dt>
+                <dd>Onboarding work compounds slowly and demos badly. Discovery is the more honest
+                  long-term bet in a density-constrained product, because a thin feed makes onboarding
+                  improvements pointless. I would schedule it next, not never.</dd>
+              </dl>
+            </div>
+            <p class="meta mt-m">Illustrative reasoning, not a record of a decision already taken.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 PRODUCT ============ -->
+  <section class="wrap block block--rule" id="product">
+    <div class="b-hang">
+      <p class="b-hang__l meta">06 / Product</p>
+      <div class="b-hang__c">
+        <h2 class="h2">How the experience works</h2>
+        <p class="body mt-m">The home screen answers one question: what is happening near me, soon.
+          It splits into Friends and Explore, filters by category, time and area, and leads with what is
+          most active rather than what is newest. A Hanglet carries a host, a place, a time, and how many
+          people are going, because those four facts are what someone needs to decide in a second.</p>
+        <p class="body">Safety is a product surface here, not a policy page. Verified hosts and verified
+          listings carry badges in the feed itself, at the moment the decision is made, rather than being
+          buried in settings where nobody reads them.</p>
+        <p class="body">I used Google Stitch to turn requirements and user journeys into high-fidelity UI
+          concepts before engineering started, so arguments about flow happened on screens rather than in
+          tickets. The build ran AI-assisted through prototyping, refinement, implementation and
+          iteration.</p>
+      </div>
+    </div>
+
+    <!-- INTERACTION 01 -->
+    <div class="ix mt-xl explore-only" data-demo data-anim>
+      <div class="ix__bar">
+        <span>Try the flow</span>
+        <span class="tag tag--demo">Demo, illustrative</span>
+      </div>
+      <div class="ix__body">
+        <div class="demo">
+          <div class="demo__screen">
+            <div class="phone">
+              <div class="phone__bar"><span>Hanglet</span><span>Demo</span></div>
+              <div class="phone__view">
+                <div class="progress" data-demo-progress aria-hidden="true"><i class="is-on"></i><i></i><i></i><i></i></div>
+
+                <div class="step is-on" data-requires-pick data-note="Step 01, Explore. The first screen answers what is happening near me, soon. Activity first and person second, so the ask is about the plan rather than about the people.">
+                  <p class="meta">Explore, near you</p>
+                  <button class="card" type="button" data-pick="Sunset Yoga and Matcha Social" aria-pressed="false">
+                    <span class="card__t">Sunset Yoga and Matcha Social</span>
+                    <span class="card__s">Madhapur, 24 going, verified host</span>
+                  </button>
+                  <button class="card" type="button" data-pick="Co-Working Sprint" aria-pressed="false">
+                    <span class="card__t">Co-Working Sprint</span>
+                    <span class="card__s">Kondapur, verified</span>
+                  </button>
+                  <button class="card" type="button" data-pick="Art District Mixer" aria-pressed="false">
+                    <span class="card__t">Art District Mixer</span>
+                    <span class="card__s">Kokapet, 7:00 PM, 8 spots left</span>
+                  </button>
+                </div>
+
+                <div class="step" data-note="Step 02, The Hanglet. Host, place, time, and how many people are going. Four facts, because that is what someone needs in order to decide in a second.">
+                  <p class="meta">The Hanglet</p>
+                  <div class="card card--sel"><span class="card__t" data-pick-echo>nothing yet</span><span class="card__s">Hosted by a verified member</span></div>
+                  <div class="card"><span class="card__t">Who is going</span><span class="card__s">A count and faces, so the room is not a surprise</span></div>
+                  <div class="card"><span class="card__t">Spots left</span><span class="card__s">Scarcity that is real rather than manufactured</span></div>
+                </div>
+
+                <div class="step" data-note="Step 03, Join. One tap against a specific plan with a time and a place. A plan can be accepted or declined. A conversation can only be abandoned.">
+                  <p class="meta">Join</p>
+                  <div class="card card--sel"><span class="card__t">Join Event</span><span class="card__s">One tap. No request letter and no opener.</span></div>
+                  <div class="card"><span class="card__t">Why it is one tap</span><span class="card__s">Confirmation screens here cost more than they protect.</span></div>
+                </div>
+
+                <div class="step" data-note="Step 04, Coordinate. The end of the flow is the start of the loop. Chat exists to make the plan actually happen rather than to replace it.">
+                  <p class="meta">You are going</p>
+                  <div class="card card--sel"><span class="card__t">Confirmed</span><span class="card__s">Time, place, and the people going</span></div>
+                  <div class="card"><span class="card__t">Chat</span><span class="card__s">For turning a confirmed plan into one that happens</span></div>
+                </div>
+              </div>
+              <div class="phone__foot">
+                <button class="btn" type="button" data-demo-next>Continue</button>
+                <button class="btn btn--ghost" type="button" data-demo-restart hidden>Start again</button>
+              </div>
+            </div>
+            <button class="btn btn--ghost mt-s" type="button" data-demo-back style="max-width:340px">Back</button>
+          </div>
+
+          <div class="demo__side">
+            <p class="meta">What is happening here</p>
+            <p class="body mt-s" data-demo-caption></p>
+            <p class="body mt-m">A simplified walkthrough of the real flow rather than the shipped interface
+              itself. The ordering is the argument: activity before person, and a plan before a
+              conversation.</p>
+            <p class="meta mt-m">Replace: drop real screenshots into <span class="mono">assets/img/</span>
+              and swap the phone markup for images.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERACTION 05 -->
+    <div class="mt-xl explore-only" data-arch data-anim>
+      <p class="meta">Interface: four decisions worth defending</p>
+      <div class="arch arch--phone mt-s">
+        <div class="arch__img">
+          <picture>
+            <source type="image/webp" sizes="(max-width:600px) 88vw, 430px"
+                    srcset="../assets/img/hanglet-app-420.webp 420w, ../assets/img/hanglet-app-700.webp 700w">
+            <img src="../assets/img/hanglet-app-700.jpg" alt="Hanglet home screen with four annotated regions"
+                 width="700" height="1556" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <button class="hot" style="left:50%;top:19%" type="button" aria-expanded="false" aria-controls="a1" aria-label="Discovery filters">1</button>
+        <button class="hot" style="left:74%;top:42%" type="button" aria-expanded="false" aria-controls="a2" aria-label="Hanglet card and join action">2</button>
+        <button class="hot" style="left:20%;top:66%" type="button" aria-expanded="false" aria-controls="a3" aria-label="Verification badge">3</button>
+        <button class="hot" style="left:42%;top:91%" type="button" aria-expanded="false" aria-controls="a4" aria-label="Create a Hanglet">4</button>
+      </div>
+      <div class="arch__out arch__out--boxed">
+        <p class="meta" data-arch-empty>Select a marker to see the decision behind it.</p>
+        <div id="a1" hidden>
+          <p class="meta label--ink">01 / Discovery filters</p>
+          <dl class="deflist mt-s">
+            <dt>User problem</dt><dd>Nearby is not a filter anyone actually thinks in. People think in tonight, something quiet, close enough to walk.</dd>
+            <dt>Product decision</dt><dd>Filter by category, time and area, and lead the feed with what is most active rather than what is newest.</dd>
+            <dt>Why</dt><dd>In a density-constrained product the empty state is the real enemy. Sorting by activity hides thinness. Sorting by recency advertises it.</dd>
+          </dl>
+        </div>
+        <div id="a2" hidden>
+          <p class="meta label--ink">02 / The card, and joining from it</p>
+          <dl class="deflist mt-s">
+            <dt>User problem</dt><dd>Deciding whether to walk into a room of strangers is a lot to ask from a title and a photograph.</dd>
+            <dt>Product decision</dt><dd>Every card carries host, place, time and how many people are going, with the join action on the card itself.</dd>
+            <dt>Why</dt><dd>Those four facts are what someone needs to decide in a second. Making them tap through to find out is a step that only loses people.</dd>
+          </dl>
+        </div>
+        <div id="a3" hidden>
+          <p class="meta label--ink">03 / Verification</p>
+          <dl class="deflist mt-s">
+            <dt>User problem</dt><dd>Meeting strangers from an app carries a real risk, and the people most exposed to it are exactly the people the product most needs to show up.</dd>
+            <dt>Product decision</dt><dd>Verified host and verified listing badges sit in the feed, on the card, at the moment the decision is made.</dd>
+            <dt>Why</dt><dd>Safety that lives on a policy page protects the company. Safety that lives on the card protects the user. Only one of those changes whether somebody taps join.</dd>
+          </dl>
+        </div>
+        <div id="a4" hidden>
+          <p class="meta label--ink">04 / Create</p>
+          <dl class="deflist mt-s">
+            <dt>User problem</dt><dd>Joining is easy. Hosting is exposing. Nobody wants to put a coffee run on the map and watch nobody come.</dd>
+            <dt>Product decision</dt><dd>Create sits in the middle of the navigation, carrying the same weight as home.</dd>
+            <dt>Why</dt><dd>Hosts are the scarce side of this marketplace. A product that makes joining beautiful and hosting awkward eventually runs out of things to join.</dd>
+          </dl>
+        </div>
+      </div>
+      <p class="meta mt-s">Annotations on the shipped interface. They describe intent rather than a spec.</p>
+    </div>
+  </section>
+
+  <!-- ============ 07 DECISIONS ============ -->
+  <section class="wrap block block--rule" id="decisions">
+    <div class="b-hang">
+      <p class="b-hang__l meta">07 / Decisions</p>
+      <div class="b-hang__c">
+        <h2 class="h2">What I chose not to build</h2>
+        <p class="body mt-m">The cut list is the part of a roadmap that actually says something. Anything
+          that did not serve the core loop went below the line, including things that were cheap, popular
+          in conversations, and easy to demo.</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">Cut, for now</p>
+        <p class="body mt-s">Swiping, public follower counts, and ratings of people. Cutting the swipe
+          kept the product out of the dating category, which was the whole point. Cutting follower
+          counts removed the incentive to collect people instead of meeting them. Cutting ratings
+          avoided turning participants into scores, which is the fastest way to make hosting feel
+          like a performance.</p>
+      </div>
+    </div>
+
+    <!-- INTERACTION 07 -->
+    <div class="mt-xl explore-only" data-anim>
+      <p class="meta">Flow change: drag to compare</p>
+      <div class="cmp mt-s" data-compare>
+        <div class="cmp__pane">
+          <div class="cmp__a">
+            <p class="cmp__lab cmp__lab--a">Before</p>
+            <p class="h3 mt-m">Six steps to first value</p>
+            <ol class="flow">
+              <li>Landing</li><li>Create account</li><li>Verify email</li>
+              <li>Complete full profile</li><li>Browse</li><li>First request sent</li>
+            </ol>
+          </div>
+          <div class="cmp__b">
+            <p class="cmp__lab cmp__lab--b">After</p>
+            <p class="h3 mt-m">Three steps to first value</p>
+            <ol class="flow">
+              <li>Landing, showing real plans nearby</li>
+              <li>Minimum profile, account deferred</li>
+              <li>First request sent</li>
+            </ol>
+          </div>
+        </div>
+        <button class="cmp__grab" type="button" role="slider" aria-label="Compare before and after"
+                aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><i>&#8596;</i></button>
+      </div>
+      <div class="reveal" data-compare-note aria-hidden="true">
+        <div><div class="reveal__in">
+          <div class="rgrid">
+            <dl class="rgrid__a deflist">
+              <dt>What changed</dt>
+              <dd>Account creation and verification moved after the first valuable action instead of
+                before it, and the landing screen shows real nearby plans rather than describing the app.</dd>
+              <dt>Why</dt>
+              <dd>Every step before value is a step people abandon while owing the product nothing. In a
+                density-dependent product it is worse than that: an empty first screen tells the user the
+                app does not work here, and they are right.</dd>
+            </dl>
+            <dl class="rgrid__b deflist">
+              <dt>Expected effect</dt>
+              <dd>Higher activation, a lower registered-user count, and a messier database. The first is
+                worth the other two at this stage.</dd>
+              <dt>How I would check</dt>
+              <dd>Activation as the primary metric, with day-7 return as a guardrail, to catch the case
+                where deferring the account simply moves the drop-off later.</dd>
+            </dl>
+          </div>
+          <p class="meta mt-m">Product exercise. A flow reduction I would argue for, not a change already shipped.</p>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- INTERACTION 03 -->
+    <div class="ix mt-xl explore-only" data-keep="3" data-anim>
+      <div class="ix__bar">
+        <span>You can only keep three</span>
+        <span class="tag tag--exercise">Product exercise</span>
+      </div>
+      <div class="ix__body">
+        <h3 class="h3">Which three survive the first release?</h3>
+        <p class="body mt-s">Selected <span class="counter" data-keep-count>0 / 3</span></p>
+
+        <div class="choices mt-m" role="group" aria-label="Choose three features">
+          <button class="choice" type="button"><span class="choice__k">01</span><span class="choice__t">Onboarding</span><span class="choice__s">The path to a first plan.</span></button>
+          <button class="choice" type="button"><span class="choice__k">02</span><span class="choice__t">Discovery</span><span class="choice__s">Seeing what is happening nearby.</span></button>
+          <button class="choice" type="button"><span class="choice__k">03</span><span class="choice__t">Profiles</span><span class="choice__s">Enough identity to feel safe.</span></button>
+          <button class="choice" type="button"><span class="choice__k">04</span><span class="choice__t">Messaging</span><span class="choice__s">Talking after the match.</span></button>
+          <button class="choice" type="button"><span class="choice__k">05</span><span class="choice__t">Events</span><span class="choice__s">A recurring reason to return.</span></button>
+          <button class="choice" type="button"><span class="choice__k">06</span><span class="choice__t">Notifications</span><span class="choice__s">Pulling people back in.</span></button>
+          <button class="choice" type="button"><span class="choice__k">07</span><span class="choice__t">Search</span><span class="choice__s">Intent-driven navigation.</span></button>
+          <button class="choice" type="button"><span class="choice__k">08</span><span class="choice__t">Groups</span><span class="choice__s">Many-to-many structure.</span></button>
+        </div>
+        <button class="btn btn--ghost mt-s" type="button" data-keep-reset hidden style="max-width:200px">Reset</button>
+
+        <div class="reveal" data-reveal aria-hidden="true">
+          <div><div class="reveal__in">
+            <div class="reveal__h"><p class="meta label--ink">What I would keep</p></div>
+            <p class="body"><b>Onboarding, discovery, profiles.</b> Not because the others are weak, but
+              because those three are the only ones that fail on their own.</p>
+            <div class="rgrid mt-m">
+              <dl class="rgrid__a deflist">
+                <dt>User value</dt>
+                <dd>Discovery is the reason anyone opens the app. Profiles are what make meeting a
+                  stranger acceptable. Onboarding is what gets them to either.</dd>
+                <dt>Frequency</dt>
+                <dd>All three are touched in every session. Events and groups are touched occasionally,
+                  by a subset.</dd>
+                <dt>Dependencies</dt>
+                <dd>Messaging, events, groups and notifications all assume discovery and profiles already
+                  work. Building them first means testing them on a broken base.</dd>
+              </dl>
+              <dl class="rgrid__b deflist">
+                <dt>Effort</dt>
+                <dd>Messaging looks like one feature and is four: delivery, state, moderation, abuse. In
+                  a product where strangers meet in person, the moderation half is not optional, which
+                  makes it the most expensive item on this list by a distance.</dd>
+                <dt>Differentiation</dt>
+                <dd>Nobody chooses an app for its notifications. Discovery is where this product is
+                  either distinct or just another nearby-people app.</dd>
+                <dt>The uncomfortable one</dt>
+                <dd>Cutting notifications hurts retention on paper. I would still cut them first.
+                  Retention mechanics on a loop that does not yet work only teach you how fast people
+                  leave.</dd>
+              </dl>
+            </div>
+            <p class="meta mt-m">Prioritisation exercise about a first release. The shipped product does
+              include chat and hosted events. The question here is sequencing, not what exists.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 08 VALIDATION ============ -->
+  <section class="wrap block block--rule" id="validation">
+    <div class="b-hang">
+      <p class="b-hang__l meta">08 / Validation</p>
+      <div class="b-hang__c">
+        <h2 class="h2">How I would know it works</h2>
+        <p class="body mt-m">I implemented Google Analytics across acquisition, activation, engagement,
+          conversion and behavioural funnels, and ran 8+ A/B experiments across onboarding, UX flows,
+          messaging and product experiences. I also built the product site from scratch and optimised
+          10+ core pages with technical SEO and search analytics.</p>
+        <p class="body">The framework matters more than any single number in it. Define the success
+          threshold before the experiment, keep a guardrail that would make you roll back, and write
+          down what would change your mind.</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">North star candidate</p>
+        <p class="body mt-s">Completed meet-ups per active user per month. It only moves when the whole
+          loop works, and it cannot be gamed by sign-ups or matches. A product that is good at
+          producing matches and bad at producing meet-ups has not solved anything.</p>
+      </div>
+    </div>
+
+    <ol class="decisions mt-xl">
+      <li><p class="d-n">01</p><p class="d-t">Activation</p><p class="d-b">Share of new users who send a first request in session one. The metric everything else divides by, and the first number I would put in front of anyone.</p></li>
+      <li><p class="d-n">02</p><p class="d-t">Conversion</p><p class="d-b">Requests that become confirmed plans, and confirmed plans that actually happen. The second number is the one nobody wants to measure and the only one that matters.</p></li>
+      <li><p class="d-n">03</p><p class="d-t">Retention</p><p class="d-b">Day-7 and day-30 return, segmented to exclude visitors and read by cohort rather than in aggregate. One new city with no density will drag the whole curve down and tell you nothing about the product.</p></li>
+      <li><p class="d-n">04</p><p class="d-t">Guardrail</p><p class="d-b">Reported discomfort or no-shows per completed meet-up. One bad experience costs more than ten good ones earn, so this can veto a release on its own.</p></li>
+    </ol>
+  </section>
+
+  <!-- ============ 09 NEXT ============ -->
+  <section class="wrap block block--rule" id="next">
+    <div class="b-hang">
+      <p class="b-hang__l meta">09 / Next</p>
+      <div class="b-hang__c">
+        <h2 class="h2">What I learned, and what I would change</h2>
+        <p class="body mt-m">Density beats features. The version of this product that works properly in one
+          neighbourhood is worth more than the version that is technically available everywhere and
+          empty in all of them. Most of what I cut, I cut because it would not have mattered until
+          there were enough people nearby for it to matter.</p>
+        <p class="body">I would have picked a smaller geography sooner. Launching wide feels like ambition
+          and behaves like dilution. Every empty feed is someone concluding the product does not work,
+          and they are not wrong.</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">Where it could go</p>
+        <p class="body mt-s">The second meet-up with the same person. That is the signal that the product has
+        become more than a way to fill an afternoon. The condition is density: none of it is worth
+        building until one area is reliably active.</p>
+      </div>
+    </div>
+
+    <!-- INTERACTION 08 -->
+    <div class="ix mt-xl explore-only" data-choice data-anim>
+      <div class="ix__bar">
+        <span>Your turn</span>
+        <span class="tag tag--exercise">Product exercise</span>
+      </div>
+      <div class="ix__body">
+        <h3 class="h3">Retention dropped after the first week. What would you investigate first?</h3>
+        <div class="choices mt-m" role="group" aria-label="Choose an approach">
+          <button class="choice" type="button" data-label="User research"><span class="choice__k">A</span><span class="choice__t">User research</span><span class="choice__s">Talk to people who left.</span></button>
+          <button class="choice" type="button" data-label="Analytics"><span class="choice__k">B</span><span class="choice__t">Analytics</span><span class="choice__s">Find where the drop happens.</span></button>
+          <button class="choice" type="button" data-label="Competitor research"><span class="choice__k">C</span><span class="choice__t">Competitor research</span><span class="choice__s">Check what changed outside.</span></button>
+          <button class="choice" type="button" data-label="Ship a feature"><span class="choice__k">D</span><span class="choice__t">Ship a feature</span><span class="choice__s">Give people a reason to return.</span></button>
+        </div>
+
+        <div class="reveal" data-reveal aria-hidden="true">
+          <div><div class="reveal__in">
+            <div class="reveal__h"><p class="meta label--ink">How I would approach it</p></div>
+            <p class="body">You picked <b data-choice-echo>none yet</b>. I would start with
+              <b>analytics</b>, then go straight to <b>research</b>, in that order and quickly.</p>
+            <div class="rgrid mt-m">
+              <dl class="rgrid__a deflist">
+                <dt>First, is it real</dt>
+                <dd>Split by cohort before believing the number. In this product the first suspect is mix:
+                  a wave of visitors or a new city with no density will drag retention down while the
+                  product itself is unchanged.</dd>
+                <dt>Then, where</dt>
+                <dd>Analytics tells me which step people stop repeating. That narrows the question from
+                  why do people leave to something answerable in a week.</dd>
+              </dl>
+              <dl class="rgrid__b deflist">
+                <dt>Then, why</dt>
+                <dd>Five conversations with people who churned beats another dashboard. Analytics locates
+                  the wound. Only users explain it. Here I would ask one question first: did your last
+                  plan actually happen.</dd>
+                <dt>Why not ship first</dt>
+                <dd>Shipping into an undiagnosed drop is how teams spend a quarter fixing the wrong step,
+                  and lose the ability to attribute whatever happens next.</dd>
+              </dl>
+            </div>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section--tight">
+    <div class="rule rule--ink"></div>
+    <div class="grid mt-xl">
+      <div class="b-half">
+        <p class="meta">Next case study</p>
+        <a class="h2 mt-s" href="paysafe.html" style="display:block">02 / Paysafe &rarr;</a>
+        <p class="body mt-s">Payment fraud decisioning, built around one north-star metric.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot" id="contact">
+  <div class="wrap foot__grid">
+    <div class="foot__a">
+      <p class="meta">Contact</p>
+      <p class="h2 mt-s">Open to product roles.</p>
+      <p class="body mt-m">Hyderabad or Bengaluru, remote, hybrid or onsite.</p>
+    </div>
+    <div class="foot__b">
+      <p class="meta">Open to</p>
+      <ul class="roles mt-s">
+        <li>Product Manager / APM</li><li>Product Analyst</li><li>Technical Product</li>
+        <li>Product Strategy</li><li>Growth Product</li><li>Founder&rsquo;s Office</li>
+      </ul>
+    </div>
+    <div class="foot__c">
+      <p class="meta">Elsewhere</p>
+      <ul class="clist mt-s">
+        <li><a href="mailto:vaibhavkedarisetti1@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/vaibhav-kedarisetti/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/vaibhavkedarisetti" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://drive.google.com/uc?export=download&amp;id=1oE2FmWEl_HJkjGMAGVhuCdu49iSefUPZ" data-dl>Resume</a></li>
+        <li><a href="https://hanglet.com" target="_blank" rel="noopener">Hanglet</a></li>
+      </ul>
+    </div>
+    <div class="foot__end">
+      <p class="meta">Vaibhav Kedarisetti, Product Builder</p>
+      <p class="meta">Designed and built by me, 2026</p>
+    </div>
+  </div>
+</footer>
+
+<div class="draftbadge" data-draft-badge>
+  <span>Draft: <b data-draft-count>0</b> placeholders left</span>
+  <button type="button" data-draft-off aria-label="Hide draft highlighting">&times;</button>
+</div>
+
+<script src="../assets/js/site.js?v=19" defer></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experiments · Vaibhav Kedarisetti</title>
+<meta name="description" content="Smaller product builds and frameworks. Problem, hypothesis, experiment, learning, including the ones not yet validated.">
+<meta name="theme-color" content="#F2F1EE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=19">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230D0D0D'/><text x='50' y='72' font-family='Helvetica,Arial' font-size='62' font-weight='500' fill='%23F2F1EE' text-anchor='middle'>V</text></svg>">
+</head>
+<body data-mode="explore">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="index.html"><b>VAIBHAV</b> <span>Product Builder</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#work">Work</a>
+      <a href="notes.html">Thinking</a>
+      <a href="experience.html">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hdr__end">
+      <a class="dl" href="https://drive.google.com/uc?export=download&amp;id=1oE2FmWEl_HJkjGMAGVhuCdu49iSefUPZ" aria-label="Download resume as PDF">Resume</a>
+      <div class="modeswitch" data-mode-switch role="group" aria-label="Reading mode">
+        <button type="button" data-mode-btn="recruiter" aria-pressed="false">Recruiter</button>
+        <button type="button" data-mode-btn="explore" aria-pressed="true">Explore</button>
+      </div>
+    </div>
+  </div>
+</header>
+<p class="sr-only" aria-live="polite" data-mode-live></p>
+
+<main id="main">
+
+  <section class="wrap case__hd">
+    <div class="grid">
+      <p class="meta" style="grid-column:1/2">05</p>
+      <div style="grid-column:2/12">
+        <h1 class="h1">Experiments</h1>
+        <p class="lead mt-l">Smaller builds and frameworks. Some worked. Some are still hypotheses, and
+          say so.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 -->
+  <section class="wrap block block--rule">
+    <div class="b-hang">
+      <p class="b-hang__l meta">01</p>
+      <div class="b-hang__c">
+        <h2 class="h2">A reusable experimentation framework</h2>
+        <p class="body mt-m">A framework covering hypothesis definition, primary and secondary metrics,
+          guardrail metrics, experiment design, statistical significance and decision criteria, written
+          once so that each new test does not restart the argument about what counts as success.</p>
+        <p class="body">I applied it to product flows across acquisition, activation, engagement and
+          conversion, connecting quantitative signals to qualitative user feedback.</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">Why it exists</p>
+        <p class="body mt-s">The decision criteria have to be written before the result arrives. Otherwise
+          the result writes them.</p>
+      </div>
+    </div>
+    <ol class="decisions mt-xl">
+      <li><p class="d-n">Problem</p><p class="d-b" style="grid-column:2/12">Teams re-litigate what success means after every test, which is when motivated reasoning is strongest.</p></li>
+      <li><p class="d-n">Hypothesis</p><p class="d-b" style="grid-column:2/12">Fixing the decision rule up front makes results faster to act on and harder to argue with.</p></li>
+      <li><p class="d-n">Result</p><p class="d-b" style="grid-column:2/12">Applied across Hanglet&rsquo;s funnel work, where it set the success threshold and the guardrail before each experiment rather than after the result arrived.</p></li>
+    </ol>
+  </section>
+
+  <!-- 02 -->
+  <section class="wrap block block--rule">
+    <div class="b-hang">
+      <p class="b-hang__l meta">02</p>
+      <div class="b-hang__c">
+        <h2 class="h2">Agent workflow automation</h2>
+        <p class="body mt-m">Multi-step AI workflows that break an enterprise task into specialised agent
+          capabilities: structured retrieval, summarisation, contextual reasoning and action generation.
+          using LLM orchestration, prompt engineering, structured outputs and explicit evaluation criteria.</p>
+        <p class="body">The interesting constraint is not model quality. It is that a workflow with four
+          agents has four places to be confidently wrong, so the evaluation criteria have to sit between
+          the steps rather than only at the end.</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">Shipped version</p>
+        <p class="body mt-s">The same pattern in production at Deloitte: four agents in one workflow,
+          cutting manual case-resolution effort by 80%.</p>
+      </div>
+    </div>
+    <ol class="decisions mt-xl">
+      <li><p class="d-n">Problem</p><p class="d-b" style="grid-column:2/12">Operational tasks are too varied for a single prompt and too repetitive to keep doing by hand.</p></li>
+      <li><p class="d-n">Hypothesis</p><p class="d-b" style="grid-column:2/12">Decomposing into narrow agents with structured outputs beats one general agent on consistency.</p></li>
+      <li><p class="d-n">Result</p><p class="d-b" style="grid-column:2/12">Validated in the enterprise case: 80% reduction in manual case-resolution effort across four agents (Case Summarizer, Context Reader, Case Updater, Resolution Plan Generator).</p></li>
+    </ol>
+  </section>
+
+  <!-- 03 -->
+  <section class="wrap block block--rule">
+    <div class="b-hang">
+      <p class="b-hang__l meta">03</p>
+      <div class="b-hang__c">
+        <h2 class="h2">Guided setup as an adoption lever</h2>
+        <p class="body mt-m">At Work4Flow I designed and implemented a guided setup experience to simplify
+          onboarding, configuration and adoption of a platform application. Enterprise software usually
+          treats configuration as an implementation problem; treating it as an onboarding problem changes
+          who has to be in the room.</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">Status</p>
+        <p class="body mt-s">Shipped. Adoption impact not measured. <b>Not yet validated</b>.</p>
+      </div>
+    </div>
+    <ol class="decisions mt-xl">
+      <li><p class="d-n">Problem</p><p class="d-b" style="grid-column:2/12">Configuration complexity delays time-to-value and pushes every new deployment through a specialist.</p></li>
+      <li><p class="d-n">Hypothesis</p><p class="d-b" style="grid-column:2/12">A guided path through setup reduces dependence on that specialist and shortens time-to-first-use.</p></li>
+      <li><p class="d-n">Result</p><p class="d-b" style="grid-column:2/12">Not yet validated. I would measure setup completion rate and time-to-first-configured-instance against the previous path.</p></li>
+    </ol>
+  </section>
+
+  <!-- 04 -->
+  <section class="wrap block block--rule">
+    <div class="b-hang">
+      <p class="b-hang__l meta">04</p>
+      <div class="b-hang__c">
+        <h2 class="h2">Data-driven UI variants</h2>
+        <p class="body mt-m">Nine or more dynamic UI variants built in UI Builder, driven by product
+          metrics and client-state parameters rather than by static configuration, with backend
+          capabilities behind them surfacing real-time platform data.</p>
+        <p class="body">The product argument: if the interface can respond to the state a client is
+          actually in, the same application can serve very different maturity levels without forking.</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">Status</p>
+        <p class="body mt-s">Shipped. Comparative impact <b>not yet validated</b>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section class="wrap block block--rule">
+    <div class="b-hang">
+      <p class="b-hang__l meta">05</p>
+      <div class="b-hang__c">
+        <h2 class="h2">Agents that automate my own ServiceNow work</h2>
+        <p class="body mt-m">I play with AI agents that take over parts of my own ServiceNow work, built
+          on the platform&rsquo;s own agent tooling. Triage, pulling context together, summarising a case,
+          drafting the next step. The repetitive middle of the job rather than the judgement at either
+          end of it.</p>
+        <p class="body">The reason this sits on a product portfolio rather than in a scratch folder is
+          that I am the user. The feedback loop is same day. There is nobody to interview and no research
+          to commission, and I find out immediately when the thing I built is annoying to use.</p>
+        <p class="body">Most product problems are harder than this one. It is still the fastest way I know
+          to practise the actual loop: notice a friction, decide whether it is worth automating, build the
+          smallest version, then live with the result.</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">Status</p>
+        <p class="body mt-s">Ongoing. Personal tooling rather than a shipped product, so the only honest
+          measure is whether I am still using it a month later.</p>
+      </div>
+    </div>
+    <ol class="decisions mt-xl">
+      <li><p class="d-n">Problem</p><p class="d-b" style="grid-column:2/12">Platform work is full of tasks that are repetitive without being identical, which is exactly the shape that resists scripting.</p></li>
+      <li><p class="d-n">Hypothesis</p><p class="d-b" style="grid-column:2/12">A narrow agent with a structured output absorbs the variation a script cannot, on tasks small enough that I can still check the answer by hand.</p></li>
+      <li><p class="d-n">Learning</p><p class="d-b" style="grid-column:2/12">The agent is rarely the hard part. Deciding which tasks are safe to hand over, and how I would notice if one started being confidently wrong, is the hard part.</p></li>
+    </ol>
+  </section>
+
+  <section class="wrap block block--rule">
+    <div class="grid">
+      <div class="b-half">
+        <p class="meta">Larger builds</p>
+        <p class="body mt-s">Two projects outgrew this page and have their own case studies.</p>
+        <p class="mt-m"><a class="link" href="work/paysafe.html">02 / Paysafe &rarr;</a></p>
+        <p class="mt-s"><a class="link" href="work/productlens.html">03 / ProductLens &rarr;</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot" id="contact">
+  <div class="wrap foot__grid">
+    <div class="foot__a">
+      <p class="meta">Contact</p>
+      <p class="h2 mt-s">Open to product roles.</p>
+      <p class="body mt-m">Hyderabad or Bengaluru, remote, hybrid or onsite.</p>
+    </div>
+    <div class="foot__b">
+      <p class="meta">Open to</p>
+      <ul class="roles mt-s">
+        <li>Product Manager / APM</li><li>Product Analyst</li><li>Technical Product</li>
+        <li>Product Strategy</li><li>Growth Product</li><li>Founder&rsquo;s Office</li>
+      </ul>
+    </div>
+    <div class="foot__c">
+      <p class="meta">Elsewhere</p>
+      <ul class="clist mt-s">
+        <li><a href="mailto:vaibhavkedarisetti1@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/vaibhav-kedarisetti/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/vaibhavkedarisetti" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://drive.google.com/uc?export=download&amp;id=1oE2FmWEl_HJkjGMAGVhuCdu49iSefUPZ" data-dl>Resume</a></li>
+      </ul>
+    </div>
+    <div class="foot__end">
+      <p class="meta">Vaibhav Kedarisetti, Product Builder</p>
+      <p class="meta">Designed and built by me, 2026</p>
+    </div>
+  </div>
+</footer>
+
+<div class="draftbadge" data-draft-badge>
+  <span>Draft: <b data-draft-count>0</b> placeholders left</span>
+  <button type="button" data-draft-off aria-label="Hide draft highlighting">&times;</button>
+</div>
+
+<script src="assets/js/site.js?v=19" defer></script>
+</body>
+</html>

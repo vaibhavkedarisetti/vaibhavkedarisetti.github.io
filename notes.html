@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notes · Vaibhav Kedarisetti</title>
+<meta name="description" content="Short pieces on prioritisation, metrics, requirements and building inside constraints.">
+<meta name="theme-color" content="#F2F1EE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=19">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230D0D0D'/><text x='50' y='72' font-family='Helvetica,Arial' font-size='62' font-weight='500' fill='%23F2F1EE' text-anchor='middle'>V</text></svg>">
+</head>
+<body data-mode="explore">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="index.html"><b>VAIBHAV</b> <span>Product Builder</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#work">Work</a>
+      <a href="notes.html" aria-current="page">Thinking</a>
+      <a href="experience.html">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hdr__end">
+      <a class="dl" href="https://drive.google.com/uc?export=download&amp;id=1oE2FmWEl_HJkjGMAGVhuCdu49iSefUPZ" aria-label="Download resume as PDF">Resume</a>
+      <div class="modeswitch" data-mode-switch role="group" aria-label="Reading mode">
+        <button type="button" data-mode-btn="recruiter" aria-pressed="false">Recruiter</button>
+        <button type="button" data-mode-btn="explore" aria-pressed="true">Explore</button>
+      </div>
+    </div>
+  </div>
+</header>
+<p class="sr-only" aria-live="polite" data-mode-live></p>
+
+<main id="main">
+
+  <section class="wrap case__hd">
+    <div class="grid">
+      <p class="meta" style="grid-column:1/2">06</p>
+      <div style="grid-column:2/12">
+        <h1 class="h1">Notes</h1>
+        <p class="lead mt-l">Short pieces. Mostly things I got wrong first.</p>
+      </div>
+    </div>
+  </section>
+
+  <article class="wrap block block--rule">
+    <div class="b-hang">
+      <p class="b-hang__l meta">01</p>
+      <div class="b-hang__c">
+        <h2 class="h2">One score hides the argument</h2>
+        <p class="body mt-m">When I prioritise, I score initiatives on five axes rather than one: user
+          value, business impact, engineering effort, strategic fit, and growth potential. Collapsing
+          those into a single number feels decisive and quietly destroys the useful information.</p>
+        <p class="body">Two initiatives can land on the same composite score for opposite reasons. One is
+          cheap and strategically irrelevant, the other is expensive and central. A single number makes
+          them look interchangeable. Five columns make the disagreement visible, which is the only way it
+          gets resolved rather than averaged away.</p>
+        <p class="body">The scoring is not the decision. It is a structured way of finding out where people
+          actually disagree, so the conversation can happen there instead of in a status meeting three
+          weeks later.</p>
+      </div>
+      <p class="b-hang__r meta">Prioritisation</p>
+    </div>
+  </article>
+
+  <article class="wrap block block--rule">
+    <div class="b-hang">
+      <p class="b-hang__l meta">02</p>
+      <div class="b-hang__c">
+        <h2 class="h2">Integrations fail at the seams, and so do requirements</h2>
+        <p class="body mt-m">Most of my enterprise work has been at the joins between systems: REST and
+          SOAP integrations, synchronisation between platforms, defect resolution across services that
+          each work correctly on their own.</p>
+        <p class="body">The pattern is consistent. Individual systems are rarely broken. What breaks is the
+          assumption each one makes about the other: field formats nobody documented, a status that means
+          two different things, an ordering guarantee that was never actually guaranteed.</p>
+        <p class="body">Requirements fail the same way. The user story is fine, the acceptance criteria are
+          fine, and the thing that breaks is the unstated assumption between them. Root-cause analysis on
+          integrations taught me to write acceptance criteria for the seam, not the component.</p>
+      </div>
+      <p class="b-hang__r meta">Requirements</p>
+    </div>
+  </article>
+
+  <article class="wrap block block--rule">
+    <div class="b-hang">
+      <p class="b-hang__l meta">03</p>
+      <div class="b-hang__c">
+        <h2 class="h2">Agents are a workflow problem wearing an AI costume</h2>
+        <p class="body mt-m">Building four AI agents into a single enterprise workflow taught me that the
+          model is rarely the constraint. Each agent was individually reasonable. The difficulty was the
+          handoffs: what one agent passes forward, what it is allowed to assume, and what happens when it
+          is confidently wrong in a way the next step cannot detect.</p>
+        <p class="body">Which makes it a product decomposition problem. Narrow the responsibility of each
+          step until its output can be checked, put structured outputs and evaluation criteria between the
+          steps, and accept that a workflow of four agents has four places to fail rather than one.</p>
+        <p class="body">The 80% reduction in manual effort came from that decomposition, not from a better
+          prompt.</p>
+      </div>
+      <p class="b-hang__r meta">AI products</p>
+    </div>
+  </article>
+
+
+</main>
+
+<footer class="foot" id="contact">
+  <div class="wrap foot__grid">
+    <div class="foot__a">
+      <p class="meta">Contact</p>
+      <p class="h2 mt-s">Open to product roles.</p>
+      <p class="body mt-m">Hyderabad or Bengaluru, remote, hybrid or onsite.</p>
+    </div>
+    <div class="foot__b">
+      <p class="meta">Open to</p>
+      <ul class="roles mt-s">
+        <li>Product Manager / APM</li><li>Product Analyst</li><li>Technical Product</li>
+        <li>Product Strategy</li><li>Growth Product</li><li>Founder&rsquo;s Office</li>
+      </ul>
+    </div>
+    <div class="foot__c">
+      <p class="meta">Elsewhere</p>
+      <ul class="clist mt-s">
+        <li><a href="mailto:vaibhavkedarisetti1@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/vaibhav-kedarisetti/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/vaibhavkedarisetti" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://drive.google.com/uc?export=download&amp;id=1oE2FmWEl_HJkjGMAGVhuCdu49iSefUPZ" data-dl>Resume</a></li>
+      </ul>
+    </div>
+    <div class="foot__end">
+      <p class="meta">Vaibhav Kedarisetti, Product Builder</p>
+      <p class="meta">Designed and built by me, 2026</p>
+    </div>
+  </div>
+</footer>
+
+<div class="draftbadge" data-draft-badge>
+  <span>Draft: <b data-draft-count>0</b> placeholders left</span>
+  <button type="button" data-draft-off aria-label="Hide draft highlighting">&times;</button>
+</div>
+
+<script src="assets/js/site.js?v=19" defer></script>
+</body>
+</html>

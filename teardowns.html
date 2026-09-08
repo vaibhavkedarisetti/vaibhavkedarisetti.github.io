@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teardowns · Vaibhav Kedarisetti</title>
+<meta name="description" content="How I take a product apart: seven lenses and the questions each one asks.">
+<meta name="theme-color" content="#F2F1EE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=19">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230D0D0D'/><text x='50' y='72' font-family='Helvetica,Arial' font-size='62' font-weight='500' fill='%23F2F1EE' text-anchor='middle'>V</text></svg>">
+</head>
+<body data-mode="explore">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="index.html"><b>VAIBHAV</b> <span>Product Builder</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#work">Work</a>
+      <a href="notes.html">Thinking</a>
+      <a href="experience.html">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hdr__end">
+      <a class="dl" href="https://drive.google.com/uc?export=download&amp;id=1oE2FmWEl_HJkjGMAGVhuCdu49iSefUPZ" aria-label="Download resume as PDF">Resume</a>
+      <div class="modeswitch" data-mode-switch role="group" aria-label="Reading mode">
+        <button type="button" data-mode-btn="recruiter" aria-pressed="false">Recruiter</button>
+        <button type="button" data-mode-btn="explore" aria-pressed="true">Explore</button>
+      </div>
+    </div>
+  </div>
+</header>
+<p class="sr-only" aria-live="polite" data-mode-live></p>
+
+<main id="main">
+
+  <section class="wrap case__hd">
+    <div class="grid">
+      <p class="meta" style="grid-column:1/2">04</p>
+      <div style="grid-column:2/12">
+        <h1 class="h1">Teardowns</h1>
+        <p class="lead mt-l">Seven lenses I use to take a product apart, and the question each one is
+          really asking.</p>
+        <p class="body mt-m">Most teardowns are screenshots with opinions attached. The useful version
+          starts from a mechanism: what is this product trying to make happen, what does it cost the user
+          to comply, and where does the loop break when it breaks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section--tight">
+    <div class="ix" data-journey data-anim>
+      <div class="ix__bar">
+        <span>The seven lenses</span>
+        <span class="tag">Interactive</span>
+      </div>
+      <div class="ix__body">
+        <div class="journey__track" role="tablist" aria-label="Teardown lenses">
+          <button class="jstep" role="tab" id="t1" aria-controls="tp1" aria-selected="true" type="button"><span class="jstep__n">01</span><span class="jstep__t">Onboarding</span></button>
+          <button class="jstep" role="tab" id="t2" aria-controls="tp2" aria-selected="false" type="button"><span class="jstep__n">02</span><span class="jstep__t">Discovery</span></button>
+          <button class="jstep" role="tab" id="t3" aria-controls="tp3" aria-selected="false" type="button"><span class="jstep__n">03</span><span class="jstep__t">Core loop</span></button>
+          <button class="jstep" role="tab" id="t4" aria-controls="tp4" aria-selected="false" type="button"><span class="jstep__n">04</span><span class="jstep__t">Retention</span></button>
+          <button class="jstep" role="tab" id="t5" aria-controls="tp5" aria-selected="false" type="button"><span class="jstep__n">05</span><span class="jstep__t">Monetisation</span></button>
+          <button class="jstep" role="tab" id="t6" aria-controls="tp6" aria-selected="false" type="button"><span class="jstep__n">06</span><span class="jstep__t">UX</span></button>
+          <button class="jstep" role="tab" id="t7" aria-controls="tp7" aria-selected="false" type="button"><span class="jstep__n">07</span><span class="jstep__t">Growth</span></button>
+        </div>
+
+        <div class="journey__panel" id="tp1" role="tabpanel" aria-labelledby="t1">
+          <div class="journey__l"><p class="meta">Lens 01</p><p class="h3 mt-s">Onboarding</p></div>
+          <div class="journey__r">
+            <p class="body">How many steps stand between arriving and the first moment that is actually
+              worth something? Count them, then ask what each one is protecting. Most exist to make a
+              database tidy rather than to make a user successful.</p>
+            <p class="meta mt-m">Tell: a product that asks for commitment before it has demonstrated value is not confident in the value.</p>
+          </div>
+        </div>
+        <div class="journey__panel" id="tp2" role="tabpanel" aria-labelledby="t2" hidden>
+          <div class="journey__l"><p class="meta">Lens 02</p><p class="h3 mt-s">Discovery</p></div>
+          <div class="journey__r">
+            <p class="body">Who decides what a user sees first: the user, an algorithm, or an editor? That
+              choice determines what the product optimises for and who it quietly disadvantages. Look at
+              the empty state: it is where a team&rsquo;s real assumptions about the user are visible.</p>
+            <p class="meta mt-m">Tell: if search is the primary navigation, discovery has been outsourced to the user.</p>
+          </div>
+        </div>
+        <div class="journey__panel" id="tp3" role="tabpanel" aria-labelledby="t3" hidden>
+          <div class="journey__l"><p class="meta">Lens 03</p><p class="h3 mt-s">Core loop</p></div>
+          <div class="journey__r">
+            <p class="body">What action does the product need repeated, and what does it give back to make
+              repetition worth it? A loop that only pays off for the company is a funnel wearing a
+              costume. Name the trigger, the action, the reward and the investment. If one is missing,
+              the retention numbers will explain why.</p>
+            <p class="meta mt-m">Tell: if you cannot state the loop in one sentence, the product does not have one yet.</p>
+          </div>
+        </div>
+        <div class="journey__panel" id="tp4" role="tabpanel" aria-labelledby="t4" hidden>
+          <div class="journey__l"><p class="meta">Lens 04</p><p class="h3 mt-s">Retention</p></div>
+          <div class="journey__r">
+            <p class="body">Does the product get more valuable the longer you use it, or merely harder to
+              leave? Accumulated value and accumulated lock-in look identical on a retention curve and are
+              completely different products. Check what a user would lose by leaving, and whether they
+              built it or the company did.</p>
+            <p class="meta mt-m">Tell: heavy notification dependence usually means the loop is not self-sustaining.</p>
+          </div>
+        </div>
+        <div class="journey__panel" id="tp5" role="tabpanel" aria-labelledby="t5" hidden>
+          <div class="journey__l"><p class="meta">Lens 05</p><p class="h3 mt-s">Monetisation</p></div>
+          <div class="journey__r">
+            <p class="body">What is priced, and does the price rise with the value the user gets or with
+              the cost the company bears? Look at what sits behind the paywall: if it is a limit rather
+              than a capability, the pricing is taxing the loop instead of extending it.</p>
+            <p class="meta mt-m">Tell: free tiers that remove the core loop do not convert, they filter.</p>
+          </div>
+        </div>
+        <div class="journey__panel" id="tp6" role="tabpanel" aria-labelledby="t6" hidden>
+          <div class="journey__l"><p class="meta">Lens 06</p><p class="h3 mt-s">UX</p></div>
+          <div class="journey__r">
+            <p class="body">Where does the interface make a decision on the user&rsquo;s behalf, and where
+              does it refuse to? Two equally weighted buttons is a team that could not agree. Defaults are
+              the strongest opinion a product holds, and the one users notice least.</p>
+            <p class="meta mt-m">Tell: count the primary actions per screen. More than one means none.</p>
+          </div>
+        </div>
+        <div class="journey__panel" id="tp7" role="tabpanel" aria-labelledby="t7" hidden>
+          <div class="journey__l"><p class="meta">Lens 07</p><p class="h3 mt-s">Growth</p></div>
+          <div class="journey__r">
+            <p class="body">Does using the product create a reason for someone else to use it, or does
+              growth have to be bought every month? Distinguish a genuine loop from a referral programme
+              bolted onto one. And check whether growth degrades the core experience. Most social
+              products die of their own acquisition.</p>
+            <p class="meta mt-m">Tell: if the growth mechanic only works for power users, it is a feature, not a loop.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap block block--rule">
+    <div class="b-hang">
+      <p class="b-hang__l meta">Published</p>
+      <div class="b-hang__c">
+        <h2 class="h2">Teardowns in progress</h2>
+        <p class="body mt-m">I am not publishing teardowns of products I have not used properly, and I am
+          not publishing claims about their internal metrics that I cannot source. The lenses above are
+          the method; the write-ups follow when they are worth reading.</p>
+      </div>
+      <div class="b-hang__r">
+        <p class="meta">Standard</p>
+        <p class="body mt-s">One lens leads and the others check it. A teardown that touches all seven
+          equally has not found anything.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot" id="contact">
+  <div class="wrap foot__grid">
+    <div class="foot__a">
+      <p class="meta">Contact</p>
+      <p class="h2 mt-s">Open to product roles.</p>
+      <p class="body mt-m">Hyderabad or Bengaluru, remote, hybrid or onsite.</p>
+    </div>
+    <div class="foot__b">
+      <p class="meta">Open to</p>
+      <ul class="roles mt-s">
+        <li>Product Manager / APM</li><li>Product Analyst</li><li>Technical Product</li>
+        <li>Product Strategy</li><li>Growth Product</li><li>Founder&rsquo;s Office</li>
+      </ul>
+    </div>
+    <div class="foot__c">
+      <p class="meta">Elsewhere</p>
+      <ul class="clist mt-s">
+        <li><a href="mailto:vaibhavkedarisetti1@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/vaibhav-kedarisetti/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/vaibhavkedarisetti" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://drive.google.com/uc?export=download&amp;id=1oE2FmWEl_HJkjGMAGVhuCdu49iSefUPZ" data-dl>Resume</a></li>
+      </ul>
+    </div>
+    <div class="foot__end">
+      <p class="meta">Vaibhav Kedarisetti, Product Builder</p>
+      <p class="meta">Designed and built by me, 2026</p>
+    </div>
+  </div>
+</footer>
+
+<div class="draftbadge" data-draft-badge>
+  <span>Draft: <b data-draft-count>0</b> placeholders left</span>
+  <button type="button" data-draft-off aria-label="Hide draft highlighting">&times;</button>
+</div>
+
+<script src="assets/js/site.js?v=19" defer></script>
+</body>
+</html>
