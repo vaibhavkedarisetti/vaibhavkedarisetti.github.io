@@ -404,9 +404,14 @@ hr,.rule{border:0;border-top:1px solid var(--rule);height:0;margin:0}
 .foot__b{grid-column:5/8}
 .foot__c{grid-column:9/13}
 .foot__end{grid-column:1/13;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-top:1px solid var(--rule);margin-top:clamp(2.4rem,6vh,5rem);padding-top:1.1rem}
+.foot__grid--compact .foot__a{grid-column:1/6}
+.foot__grid--compact .foot__c{grid-column:8/13}
+.foot__grid--compact .foot__end{margin-top:clamp(2rem,4vh,3.5rem)}
 @media (max-width:900px){
   .foot__a{grid-column:1/13}.foot__b{grid-column:1/7;margin-top:2.4rem}
   .foot__c{grid-column:7/13;margin-top:2.4rem}
+  .foot__grid--compact .foot__a,.foot__grid--compact .foot__c{grid-column:1/13}
+  .foot__grid--compact .foot__c{margin-top:1.8rem}
 }
 .clist li+li{margin-top:.45rem}
 .clist a{font-size:var(--t-meta);text-transform:uppercase;letter-spacing:.17em;display:inline-flex;gap:.5rem;transition:opacity .2s}
@@ -418,8 +423,8 @@ hr,.rule{border:0;border-top:1px solid var(--rule);height:0;margin:0}
 /* recruiter mode: 2-3 minute read. Hides exploratory depth, keeps substance. */
 /* resume download button, and the header cluster that holds it beside the mode switch */
 .hdr__end{display:flex;align-items:center;gap:.55rem;flex-shrink:0}
-.dl{display:inline-flex;align-items:center;gap:.45rem;border:1px solid var(--ink);
-  padding:.36em .72em;font-size:.625rem;text-transform:uppercase;letter-spacing:.16em;
+.dl{display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--ink);
+  padding:.34em .55em;font-size:.625rem;text-transform:uppercase;letter-spacing:.16em;
   font-weight:500;white-space:nowrap;transition:background .2s,color .2s}
 .dl::after{content:"\2193";font-size:.9em;line-height:1}
 .dl:hover{background:var(--ink);color:var(--paper)}
@@ -465,7 +470,7 @@ html[data-draft="on"] .draftbadge{display:inline-flex}
   /* Keep brand, resume and mode controls on one row. Their expanded touch
      targets are supplied below by pseudo-elements, not visual padding. */
   .hdr__end{gap:.25rem}
-  .dl{padding:.5em .65em}
+  .dl{padding:.3em .55em}
   .modeswitch button{padding:.3em .55em}
 }
 
@@ -485,7 +490,7 @@ html[data-draft="on"] .draftbadge{display:inline-flex}
      overlay. Growing them with min-height pushed the sticky header to 15% of a
      phone screen, which costs more than it buys. Vertical-only inset here,
      because these sit side by side and horizontal overlap causes mis-taps. */
-  .dl{padding:.62em .9em}
+  .dl{padding:.3em .55em}
   .dl,.modeswitch button{position:relative}
   .dl::before,.modeswitch button::before{content:"";position:absolute;inset:-9px 0}
   .btn{padding:.9rem 1rem}
